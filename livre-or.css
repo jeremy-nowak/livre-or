@@ -1,0 +1,155 @@
+.cadre{
+    display: flex;
+    flex-direction: row;
+    justify-items: left;
+    padding-bottom: 3%; 
+    background-color: rgba(255, 255, 255, 0.527);
+    
+
+}
+.sommaire{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.sommaire ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    
+}
+.sommaire a{
+    text-decoration: none;
+    color: rgb(10, 9, 9);
+    width: 100%;
+
+}
+.sommaire h2:hover{
+    color: #495746a9;
+    transform: scale(1.2);
+}
+
+footer{
+    flex-shrink: 0;
+    border-top: 1px dashed #0000;
+    width: 100%;
+    color:rgb(12, 11, 11);
+    font-family: 'Roboto', sans-serif;
+   }
+   .contenu-footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    
+   }
+   .bloc-footer-services{
+    display: flex;
+    flex-direction: column;
+    
+
+   }
+   .bloc-footer-services li{
+    
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+   }
+   .bloc-footer-services a{
+    text-decoration: none;
+    color: white;
+   }
+   
+   .formulaire{
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #ACC8CC;
+    height: 650px;
+    font-family: 'Roboto', sans-serif;
+   
+    
+}
+.formulaire ul{
+    display: flex;
+    flex-direction: column;
+}
+.formulaire h1{
+    margin: 0 0 30px 0;
+    text-align: center;
+    display: flex;
+}
+#wallpaper{
+    background-size: cover;
+    width: 100%;
+    background-attachment: scroll;
+    
+}
+body{
+    background-image: url("https://e1.pxfuel.com/desktop-wallpaper/443/882/desktop-wallpaper-literature-old-books-livres-anciens-literature.jpg");
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+}
+footer{
+    flex-shrink: 0;
+    border-top: 1px dashed #0000;
+    width: 100%;
+    background-color: transparent;
+    color:white;
+    bottom: 0;
+   }
+   .img_prof{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+   }
+.img_prof img{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 30%;    
+}
+.millieu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.527);
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+
+.millieu img{
+    background-image: url("https://media.tenor.com/pqTCFxqhfN4AAAAM/locked-up-akon.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+.form_deco{
+    background-color: white;
+}
+
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #92a4a7;border-collapse: collapse;
+}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;
+}
+.tftable tr {background-color:#f4f7f8;
+}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;
+}
+.tftable tr:hover {background-color:#ffffff77;
+}
