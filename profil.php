@@ -1,5 +1,35 @@
 <?php
-   include 'connect.php'
+ 
+$insc="";
+include "connect.php";
+
+
+if(isset($_POST['modify'])){
+    $id=$_SESSION['id'];
+    $log=$_POST['login'];
+    $pass=$_POST['password'];
+    $repass=$_POST['password_conf'];
+        if(empty($log)){
+            $insc="Login laissé vide!";
+        }
+        elseif(empty($pass)){
+            $insc="Mot de passe laissé vide!";
+        }
+        elseif($pass!=$repass){ 
+            $insc= "Mots de passe non identiques!";
+        }
+    else{
+
+    $update = "UPDATE utilisateurs SET login='$log', password='$pass' WHERE id=$id";
+		echo $update;
+    $request = $connect->query($update);
+    $_SESSION ['login'] = $log;
+
+		$insc="Modification effectuer" ;
+    }
+	
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +50,8 @@
 </header>
 <div class="millieu">
 <h1>Bonjour <?= $_SESSION['login']?> </h1>
-   
+ 
+
    <div class="formulaire">
       <form method="post"> 
             <fieldset>
@@ -33,49 +64,18 @@
                 <input type="password" placeholder="Nouveau password" name="password" id="password"><br>
                 <br>
                 <input type="password" placeholder="Confirmation nouveau password" name="password_conf" id="password"><br>
+				
                 
                 <br>
 
                  <br>
                  <br>
 
-                <button type="submit" name="button" >Valider le changement</button>
-                <?php if(isset($mess_error)){ ?>
-                    <span><p><?= $mess_error ?></p></span>
-                <?php } ?>
-                <?php if(isset($mess_passwd)){ ?>
-                <?= $mess_passwd ?>
-                <?php } ?>
-<?php
-
-$insc="";
-   if(isset($_POST['button'])&& $_POST['password']==$_POST['password_conf'] ){
-      
-      $user=mysqli_fetch_assoc($req);
-
-      $pass=$_POST['password'];
-      $repass=$_POST['password_conf'];
-      $update = "UPDATE utilisateurs SET  password='$pass' WHERE login='$id'";
-      $request = $connect->query($update);
-      $insc="Modification effectuer" ;
-
-      var_dump($user);
-
-
-
-
-}
-else{
-   $insc= "Information vide ou incorrect";
-}
-
-?>
-
-
-
+                <button type="submit" name="modify">Valider le changement</button>
             </fieldset>
          </form>
     </div>
+
 
 </div>
 <footer>

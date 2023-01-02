@@ -67,7 +67,7 @@
                 else {
                   echo "<h1> Mode invité sans login</h1>";
                 }
-
+ 
 $result = $connect->query("SELECT commentaires.date, utilisateurs.login, commentaires.commentaire, commentaires.id  FROM `commentaires` INNER JOIN `utilisateurs` ON utilisateurs.id = commentaires.id_utilisateur ORDER BY date DESC");
 
 $a= $result -> fetch_array(MYSQLI_ASSOC); ?>
